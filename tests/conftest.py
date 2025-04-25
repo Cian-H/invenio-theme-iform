@@ -2,7 +2,7 @@
 #
 # Copyright (C) 2020-2021 Graz University of Technology.
 #
-# invenio-theme-tugraz is free software; you can redistribute it and/or
+# invenio-theme-iform is free software; you can redistribute it and/or
 # modify it under the terms of the MIT License; see LICENSE file for more
 # details.
 
@@ -16,7 +16,7 @@ import pytest
 from flask import Flask
 from invenio_i18n import InvenioI18N
 
-from invenio_theme_tugraz import InvenioThemeTugraz
+from invenio_theme_iform import InvenioThemeIform
 
 
 @pytest.fixture()
@@ -26,7 +26,7 @@ def app(request):
     app.config.update(
         I18N_LANGUAGES=[("en", "English"), ("de", "German")],
     )
-    InvenioThemeTugraz(app)
+    InvenioThemeIform(app)
     InvenioI18N(app)
 
     return app

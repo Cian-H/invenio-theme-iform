@@ -1,7 +1,7 @@
 ..
     Copyright (C) 2020-2021 Graz University of Technology.
 
-    invenio-theme-tugraz is free software; you can redistribute it and/or
+    invenio-theme-iform is free software; you can redistribute it and/or
     modify it under the terms of the MIT License; see LICENSE file for more
     details.
 
@@ -154,7 +154,7 @@ Version 3.9.1 (released 2022-06-02)
 
 Version 3.9.0 (released 2022-05-27)
 
-- global: migrate setup.py to setup.cfg #260 
+- global: migrate setup.py to setup.cfg #260
 
 Version 3.8.0 (released 2022-03-03)
 

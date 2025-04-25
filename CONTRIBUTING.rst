@@ -10,7 +10,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/tu-graz-library/invenio-theme-tugraz/issues.
+Report bugs at https://github.com/Cian-H/invenio-theme-iform/issues.
 
 If you are reporting a bug, please include:
 
@@ -33,15 +33,15 @@ is open to whoever wants to implement it.
 Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
-invenio-theme-tugraz could always use more documentation, whether as part of the
-official invenio-theme-tugraz docs, in docstrings, or even on the web in blog posts,
+invenio-theme-iform could always use more documentation, whether as part of the
+official invenio-theme-iform docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
 The best way to send feedback is to file an issue at
-https://github.com/tu-graz-library/invenio-theme-tugraz/issues.
+https://github.com/Cian-H/invenio-theme-iform/issues.
 
 If you are proposing a feature:
 
@@ -53,14 +53,14 @@ If you are proposing a feature:
 Get Started!
 ------------
 
-Ready to contribute? Here's how to set up `invenio-theme-tugraz` for local development.
+Ready to contribute? Here's how to set up `invenio-theme-iform` for local development.
 
-1. Fork the `https://github.com/tu-graz-library/invenio-theme-tugraz.git` repo on GitHub.
+1. Fork the `https://github.com/Cian-H/invenio-theme-iform.git` repo on GitHub.
 2. Clone your fork locally:
 
    .. code-block:: console
 
-      $ git clone git@github.com:your_name_here/invenio-theme-tugraz.git
+      $ git clone git@github.com:your_name_here/invenio-theme-iform.git
 
 3. Install your local copy into a virtualenv. Assuming you have
    virtualenvwrapper installed, this is how you set up your fork for local
@@ -68,8 +68,8 @@ Ready to contribute? Here's how to set up `invenio-theme-tugraz` for local devel
 
    .. code-block:: console
 
-      $ mkvirtualenv invenio-theme-tugraz
-      $ cd invenio-theme-tugraz/
+      $ mkvirtualenv invenio-theme-iform
+      $ cd invenio-theme-iform/
       $ pip install -e .[all]
 
 4. Create a branch for local development:
@@ -114,5 +114,5 @@ Before you submit a pull request, check that it meets these guidelines:
 2. If the pull request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring.
 3. The pull request should work for Python 2.7, 3.5 and 3.6. Check
-   https://github.com/tu-graz-library/invenio-theme-tugraz/actions?query=event%3Apull_request
+   https://github.com/Cian-H/invenio-theme-iform/actions?query=event%3Apull_request
    and make sure that the tests pass for all supported Python versions.

@@ -2,7 +2,7 @@
 #
 # Copyright (C) 2020-2021 Graz University of Technology.
 #
-# invenio-theme-tugraz is free software; you can redistribute it and/or
+# invenio-theme-iform is free software; you can redistribute it and/or
 # modify it under the terms of the MIT License; see LICENSE file for more
 # details.
 
@@ -10,7 +10,7 @@ include .dockerignore
 include .editorconfig
 include .tx/config
 prune docs/_build
-recursive-include invenio_theme_tugraz/translations *.po *.pot *.mo
+recursive-include invenio_theme_iform/translations *.po *.pot *.mo
 
 # added by check_manifest.py
 include *.md
@@ -26,19 +26,19 @@ recursive-include docs *.py
 recursive-include docs *.rst
 recursive-include docs *.txt
 recursive-include docs Makefile
-recursive-include invenio_theme_tugraz *.html
-recursive-include invenio_theme_tugraz *.js
-recursive-include invenio_theme_tugraz *.png
-recursive-include invenio_theme_tugraz *.scss
-recursive-include invenio_theme_tugraz *.svg
-recursive-include invenio_theme_tugraz *.less
-recursive-include invenio_theme_tugraz *.ico
-recursive-include invenio_theme_tugraz *.pdf
-recursive-include invenio_theme_tugraz *.ttf
-recursive-include invenio_theme_tugraz *.txt
+recursive-include invenio_theme_iform *.html
+recursive-include invenio_theme_iform *.js
+recursive-include invenio_theme_iform *.png
+recursive-include invenio_theme_iform *.scss
+recursive-include invenio_theme_iform *.svg
+recursive-include invenio_theme_iform *.less
+recursive-include invenio_theme_iform *.ico
+recursive-include invenio_theme_iform *.pdf
+recursive-include invenio_theme_iform *.ttf
+recursive-include invenio_theme_iform *.txt
 
 recursive-include tests *.py
-recursive-include invenio_theme_tugraz *.jpg
-recursive-include invenio_theme_tugraz *.gitkeep
+recursive-include invenio_theme_iform *.jpg
+recursive-include invenio_theme_iform *.gitkeep
 recursive-include .github/workflows *.yml
 include .git-blame-ignore-revs

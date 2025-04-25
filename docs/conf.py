@@ -2,13 +2,13 @@
 #
 # Copyright (C) 2020-2021 Graz University of Technology.
 #
-# invenio-theme-tugraz is free software; you can redistribute it and/or
+# invenio-theme-iform is free software; you can redistribute it and/or
 # modify it under the terms of the MIT License; see LICENSE file for more
 # details.
 
 """Sphinx configuration."""
 
-from invenio_theme_tugraz import __version__
+from invenio_theme_iform import __version__
 
 # -- General configuration ------------------------------------------------
 
@@ -44,7 +44,7 @@ source_suffix = ".rst"
 master_doc = "index"
 
 # General information about the project.
-project = "invenio-theme-tugraz"
+project = "invenio-theme-iform"
 copyright = "2020, Graz University of Technology"
 author = "Graz University of Technology"
 
@@ -106,15 +106,15 @@ todo_include_todos = False
 html_theme = "alabaster"
 
 html_theme_options = {
-    "description": "invenio module for TUGRAZ theme.",
-    "github_user": "TU Graz",
-    "github_repo": "invenio-theme-tugraz",
+    "description": "invenio module for I-Form theme.",
+    "github_user": "Cian-H",
+    "github_repo": "invenio-theme-iform",
     "github_button": False,
     "github_banner": True,
     "show_powered_by": False,
     "extra_nav_links": {
-        "invenio-theme-tugraz@GitHub": "https://github.com/tu-graz-library/invenio-theme-tugraz",
-        "invenio-theme-tugraz@PyPI": "https://pypi.python.org/pypi/invenio-theme-tugraz/",
+        "invenio-theme-iform@GitHub": "https://github.com/Cian-H/invenio-theme-iform",
+        "invenio-theme-iform@PyPI": "https://pypi.python.org/pypi/invenio-theme-iform/",
     },
 }
 
@@ -219,7 +219,7 @@ html_sidebars = {
 # html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "invenio-theme-tugraz_namedoc"
+htmlhelp_basename = "invenio-theme-iform_namedoc"
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -240,8 +240,8 @@ latex_elements = {
 latex_documents = [
     (
         master_doc,
-        "invenio-theme-tugraz.tex",
-        "invenio-theme-tugraz Documentation",
+        "invenio-theme-iform.tex",
+        "invenio-theme-iform Documentation",
         "Graz University of Technology",
         "manual",
     ),
@@ -275,8 +275,8 @@ latex_documents = [
 man_pages = [
     (
         master_doc,
-        "invenio-theme-tugraz",
-        "invenio-theme-tugraz Documentation",
+        "invenio-theme-iform",
+        "invenio-theme-iform Documentation",
         [author],
         1,
     )
@@ -294,11 +294,11 @@ man_pages = [
 texinfo_documents = [
     (
         master_doc,
-        "invenio-theme-tugraz",
-        "invenio-theme-tugraz Documentation",
+        "invenio-theme-iform",
+        "invenio-theme-iform Documentation",
         author,
-        "invenio-theme-tugraz",
-        "invenio module for TUGRAZ theme.",
+        "invenio-theme-iform",
+        "invenio module for I-Form theme.",
         "Miscellaneous",
     ),
 ]
