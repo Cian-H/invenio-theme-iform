@@ -74,9 +74,9 @@ def require_iform_authenticated(view_func):
 @login_required
 def overview():
     """Overview."""
-    url = current_user_resources.users_service.links_item_tpl.expand(
-        g.identity, current_user
-    )["avatar"]
+    url = current_user_resources.users_service.links_item_tpl.expand(g.identity, current_user)[
+        "avatar"
+    ]
     is_iform_authenticated = current_identity_is_iform_authenticated()
     return render_template(
         "invenio_theme_iform/overview.html",
@@ -134,9 +134,7 @@ def index():
     """Frontpage."""
     records = FrontpageRecordsSearch()[:5].sort("-created").execute()
 
-    return render_template(
-        "invenio_theme_iform/index.html", records=records_serializer(records)
-    )
+    return render_template("invenio_theme_iform/index.html", records=records_serializer(records))
 
 
 def locked(e):
