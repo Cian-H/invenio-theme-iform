@@ -41,7 +41,7 @@ Features:
 * I-Form custom contact template.
 * I-Form overriden theme.
 
-Forked from https://github.com/tu-graz-library/invenio-theme-tugraz
-
 Further documentation is available on
 https://invenio-theme-iform.readthedocs.io/
+
+Forked from https://github.com/tu-graz-library/invenio-theme-tugraz
