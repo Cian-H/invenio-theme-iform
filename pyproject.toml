@@ -27,6 +27,9 @@ dependencies = [
     "invenio_records_marc21>=0.21.0",
 ]
 
+[tool.uv.sources]
+invenio-config-iform = { path = "wheel/invenio_config_iform-0.12.5-py3-none-any.whl" }
+
 [project.urls]
 Homepage = "https://github.com/Cian-H/invenio-theme-iform"
 Issues = "https://github.com/Cian-H/invenio-theme-iform/issues"
@@ -64,7 +67,10 @@ invenio_theme_iform = "invenio_theme_iform.ext:finalize_app"
 [tool.setuptools]
 zip-safe = false
 include-package-data = true
-packages = { find = {} }
+
+[tool.setuptools.packages.find]
+include = ["invenio_theme_iform"]
+exclude = [".venv", "tests/*", "*/tests/*", "*.rst", "run-tests.sh"]
 
 [tool.setuptools.dynamic]
 version = { attr = "invenio_theme_iform.__version__" }
