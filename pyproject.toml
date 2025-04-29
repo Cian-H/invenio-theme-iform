@@ -34,6 +34,11 @@ invenio-config-iform = { path = "wheel/invenio_config_iform-0.13.1-py3-none-any.
 Homepage = "https://github.com/Cian-H/invenio-theme-iform"
 Issues = "https://github.com/Cian-H/invenio-theme-iform/issues"
 
+[project.scripts]
+test-docs = "scripts.test_docs:main"
+test-code = "pytest:console_main"
+test = "scripts.test:main"
+
 [dependency-groups]
 tests = [
     "invenio-app>=1.3.4,<2.0.0",
