@@ -5,7 +5,10 @@
   inputs,
   ...
 }: {
-  packages = [pkgs.git];
+  packages = [
+    pkgs.git
+    pkgs.act
+  ];
 
   languages.python = {
     enable = true;
