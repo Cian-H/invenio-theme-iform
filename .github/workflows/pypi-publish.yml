@@ -1,9 +1,0 @@
-on:
-  push:
-    tags:
-      - v*
-
-jobs:
-  build-n-publish:
-    uses: Cian-H/.github/.github/workflows/pypi-publish.yml@main
-    secrets: inherit
