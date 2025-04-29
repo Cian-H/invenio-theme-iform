@@ -18,7 +18,7 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Development Status :: 3 - Alpha",
 ]
-requires-python = ">=3.12"
+requires-python = ">=3.10,<3.13"
 dependencies = [
     "invenio-assets>=2.0.0",
     "invenio-i18n>=1.3.1",
@@ -28,7 +28,7 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-invenio-config-iform = { path = "wheel/invenio_config_iform-0.12.5-py3-none-any.whl" }
+invenio-config-iform = { path = "wheel/invenio_config_iform-0.13.1-py3-none-any.whl" }
 
 [project.urls]
 Homepage = "https://github.com/Cian-H/invenio-theme-iform"
