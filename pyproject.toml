@@ -27,9 +27,6 @@ dependencies = [
     "invenio_records_marc21>=0.21.0",
 ]
 
-[tool.uv.sources]
-invenio-config-iform = { path = "wheel/invenio_config_iform-0.13.1-py3-none-any.whl" }
-
 [project.urls]
 Homepage = "https://github.com/Cian-H/invenio-theme-iform"
 Issues = "https://github.com/Cian-H/invenio-theme-iform/issues"
