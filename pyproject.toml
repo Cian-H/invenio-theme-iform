@@ -41,48 +41,30 @@ tests = [
     "invenio-rdm-records<17.0.0",
     "invenio-search[opensearch2]>=2.1.0",
     "pytest<8.0.0",
-    "pytest-black-ng>=0.4.0",
     "pytest-invenio>=2.1.0",
+    "pytest-ruff>=0.4.1",
     "Sphinx>=4.5.0",
 ]
 
-[project.entry-points."invenio_base.apps"]
-invenio_theme_iform = "invenio_theme_iform:InvenioThemeIform"
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
-[project.entry-points."invenio_base.blueprints"]
-invenio_theme_iform = "invenio_theme_iform.views:ui_blueprint"
+[tool.hatch.version]
+path = "invenio_theme_iform/__version__.py"
 
-[project.entry-points."invenio_i18n.translations"]
-messages = "invenio_theme_iform"
-
-[project.entry-points."invenio_assets.webpack"]
-invenio_theme_iform_theme = "invenio_theme_iform.webpack:theme"
-
-[project.entry-points."invenio_config.module"]
-invenio_theme_iform = "invenio_theme_iform.config"
-
-[project.entry-points."invenio_base.finalize_app"]
-invenio_theme_iform = "invenio_theme_iform.ext:finalize_app"
-
-[tool.setuptools]
-zip-safe = false
-include-package-data = true
-
-[tool.setuptools.packages.find]
+[tool.hatch.build]
 include = ["invenio_theme_iform"]
 exclude = [".venv", "tests/*", "*/tests/*", "*.rst", "run-tests.sh"]
 
-[tool.setuptools.dynamic]
-version = { attr = "invenio_theme_iform.__version__" }
-
 # Testing configuration
 [tool.pytest]
-addopts = "--black --isort --pydocstyle --doctest-glob=\"*.rst\" --doctest-modules --cov=invenio_theme_iform --cov-report=term-missing tests invenio_theme_iform"
+addopts = "--ruff --ruff-format --pydocstyle --doctest-glob=\"*.rst\" --doctest-modules --cov=invenio_config_iform --cov-report=term-missing tests invenio_theme_iform"
 testpaths = ["tests", "invenio_theme_iform"]
 live_server_scope = "module"
 
 [tool.pytest.ini_options]
-addopts = "--black --isort --pydocstyle --doctest-glob=\"*.rst\" --doctest-modules --cov=invenio_theme_iform --cov-report=term-missing tests invenio_theme_iform"
+addopts = "--ruff --ruff-format --pydocstyle --doctest-glob=\"*.rst\" --doctest-modules --cov=invenio_config_iform --cov-report=term-missing tests invenio_theme_iform"
 testpaths = ["tests", "invenio_theme_iform"]
 live_server_scope = "module"
 

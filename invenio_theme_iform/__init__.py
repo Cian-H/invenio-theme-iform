@@ -8,8 +8,8 @@
 
 """invenio module for I-Form theme."""
 
+from .__version__ import version as __version__
 from .ext import InvenioThemeIform
 
-__version__ = "4.13.0"
 
 __all__ = ("__version__", "InvenioThemeIform")
