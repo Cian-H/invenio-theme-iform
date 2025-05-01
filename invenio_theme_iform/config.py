@@ -45,7 +45,7 @@ THEME_IFORM_SUPPORT_EMAIL = ""
 THEME_500_TEMPLATE = "invenio_theme_iform/default_error.html"
 """Used for any internal server errors and uncaught exceptions."""
 
-THEME_LOGO = "images/tug_logo.png"
+THEME_LOGO = "images/iform_logo.png"
 """I-Form logo"""
 
 THEME_SEARCHBAR = False
