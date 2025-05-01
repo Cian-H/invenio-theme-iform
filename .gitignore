@@ -70,3 +70,6 @@ devenv.local.nix
 
 # pre-commit
 .pre-commit-config.yaml
+
+# python version lock
+.python-version
