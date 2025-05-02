@@ -8,4 +8,4 @@
 
 """Version data for this python module."""
 
-version = "4.15.2"
+version = "4.15.3"
