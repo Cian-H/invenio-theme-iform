@@ -63,7 +63,7 @@ THEME_HEADER_LOGIN_TEMPLATE = "invenio_theme_iform/accounts/header_login.html"
 THEME_FOOTER_TEMPLATE = "invenio_theme_iform/footer.html"
 """footer template"""
 
-THEME_FRONTPAGE_TITLE = _("TU Graz Repository")
+THEME_FRONTPAGE_TITLE = _("I-Form Repository")
 """Frontpage title."""
 
 THEME_SITENAME = _("Repository")
