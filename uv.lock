@@ -1563,16 +1563,16 @@ wheels = [
 
 [[package]]
 name = "invenio-config-iform"
-version = "0.13.2"
+version = "0.13.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "invenio-cache" },
     { name = "invenio-i18n" },
     { name = "invenio-rdm-records" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/cb/4d/1f4accbdae97863bde8808f2240838b61f96cc5f0bfd0c400af915cf3abc/invenio_config_iform-0.13.2.tar.gz", hash = "sha256:cb2ba8bed696dc15a3ec9835d3bd36fd50640cd4f37101511058c2cc28c5d191", size = 2853455, upload-time = "2025-05-01T08:03:00.101Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/6d/b4/fbafd418b0ef21860b4e2905578aff3d8fcaececdd55df6df01818bf3336/invenio_config_iform-0.13.3.tar.gz", hash = "sha256:977dc2352450b7ab59ef5b186d79f9c3b3b92c3e02a2d974e83187a29d4b7bd3", size = 2853574, upload-time = "2025-05-02T13:01:17.506Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a2/8f/f20885e7ed96efb49f8313ec3fe2139ef8494dc62747fd99f055eb508984/invenio_config_iform-0.13.2-py3-none-any.whl", hash = "sha256:eb9f2a08d9806262ca6b1a1781c946e9801dcbca5902f15351251c0b1c4de304", size = 2864100, upload-time = "2025-05-01T08:02:57.54Z" },
+    { url = "https://files.pythonhosted.org/packages/da/4e/d27083de472828a9814aaee6acb32bbe75346aa81008c3ce815407f1595e/invenio_config_iform-0.13.3-py3-none-any.whl", hash = "sha256:bfdeec8af5e5319ef2988ebcf32102a4c0d656485d67751c2b852683ce8a9d78", size = 2864221, upload-time = "2025-05-02T13:01:15.341Z" },
 ]
 
 [[package]]
@@ -2231,7 +2231,7 @@ tests = [
 [package.metadata]
 requires-dist = [
     { name = "invenio-assets", specifier = ">=2.0.0" },
-    { name = "invenio-config-iform", specifier = ">=0.11.0" },
+    { name = "invenio-config-iform", specifier = ">=0.13.3" },
     { name = "invenio-i18n", specifier = ">=1.3.1" },
     { name = "invenio-records-global-search", specifier = ">=0.0.1" },
     { name = "invenio-records-marc21", specifier = ">=0.21.0" },
