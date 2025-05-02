@@ -39,6 +39,24 @@ test-docs = "scripts.test_docs:main"
 test-code = "pytest:console_main"
 test = "scripts.test:main"
 
+[project.entry-points."invenio_base.apps"]
+invenio_theme_iform = "invenio_theme_iform:InvenioThemeIform"
+
+[project.entry-points."invenio_base.blueprints"]
+invenio_theme_iform = "invenio_theme_iform.views:ui_blueprint"
+
+[project.entry-points."invenio_i18n.translations"]
+messages = "invenio_theme_iform"
+
+[project.entry-points."invenio_assets.webpack"]
+invenio_theme_iform_theme = "invenio_theme_iform.webpack:theme"
+
+[project.entry-points."invenio_config.module"]
+invenio_theme_iform = "invenio_theme_iform.config"
+
+[project.entry-points."invenio_base.finalize_app"]
+invenio_theme_iform = "invenio_theme_iform.ext:finalize_app"
+
 [dependency-groups]
 tests = [
     "invenio-app>=1.3.4",
