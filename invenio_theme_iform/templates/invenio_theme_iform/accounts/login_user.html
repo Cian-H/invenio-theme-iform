@@ -1,12 +1,12 @@
 {#
   Copyright (C) 2020-2021 Graz University of Technology.
 
-  invenio-theme-iform is free software; you can redistribute it and/or
+  invenio-theme-tugraz is free software; you can redistribute it and/or
   modify it under the terms of the MIT License; see LICENSE file for more
   details.
 #}
 
-{% extends config.INVENIO_THEME_IFORM_ACCOUNT_BASE %}
+{% extends config.INVENIO_THEME_TUGRAZ_ACCOUNT_BASE %}
 
 
 {% from "invenio_accounts/_macros.html" import render_field, form_errors %}
@@ -37,7 +37,7 @@
             {{
             _('Log in with %(title)s', title=config.SSO_SAML_IDPS[name]['title']|default("SAML", true))
             }}
-            <img src="{{ url_for('static', filename=config.INVENIO_THEME_IFORM_ICON)}}" height="20px" />
+            <img src="{{ url_for('static', filename=config.INVENIO_THEME_TUGRAZ_ICON)}}" height="20px" />
           </a>
         </div>
         {% endfor %}

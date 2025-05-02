@@ -1,12 +1,12 @@
 {#
   Copyright (C) 2020-2023 Graz University of Technology.
 
-  invenio-theme-iform is free software; you can redistribute it and/or
+  invenio-theme-tugraz is free software; you can redistribute it and/or
   modify it under the terms of the MIT License; see LICENSE file for more
   details.
 #}
 
-{% if not config.THEME_IFORM_PRODUCTION %}
+{% if not config.THEME_TUGRAZ_PRODUCTION %}
   <div class="ui sticky test-instance">
     <h4>{{ _("Test Instance") }}</h4>
     <p>{{ _("This is the test instance of the TU Graz Repository.") }}</p>
@@ -23,14 +23,14 @@
     {%- block navbar %}
       <nav>
         {%- block navbar_header %}
-          {%- include "invenio_theme_iform/navbar.html" %}
+          {%- include "invenio_theme_tugraz/navbar.html" %}
         {%- endblock navbar_header %}
 
         <div class="ui container">
           <div class="ui grid stackable container">
             <div class="three column row centered" style="padding-bottom: 0;">
               <div class="two wide column main-menu-entry">
-                <a href="{{url_for('invenio_theme_iform.index')}}" title="Home" class="no-decoration">
+                <a href="{{url_for('invenio_theme_tugraz.index')}}" title="Home" class="no-decoration">
                   <span class="home-inline">
                     <svg shape-rendering="geometricPrecision" id="int-menu-q-home-icon"
                          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg"

@@ -1,12 +1,12 @@
 {#
   Copyright (C) 2020 Graz University of Technology.
 
-  invenio-theme-iform is free software; you can redistribute it and/or
+  invenio-theme-tugraz is free software; you can redistribute it and/or
   modify it under the terms of the MIT License; see LICENSE file for more
   details.
 #}
 
-{% extends config.INVENIO_THEME_IFORM_ACCOUNT_BASE %}
+{% extends config.INVENIO_THEME_TUGRAZ_ACCOUNT_BASE %}
 
 {% from "invenio_accounts/_macros.html" import render_field, form_errors %}
 
@@ -38,11 +38,11 @@
 
     <div class="column" id="switch_right">
       {# Sigup with SSO #}
-      {%- if config.INVENIO_CONFIG_IFORM_SHIBBOLETH %}
+      {%- if config.INVENIO_CONFIG_TUGRAZ_SHIBBOLETH %}
       <div class="ui divider"></div>
         <a href="{{ url_for("sso_saml.sso", idp="idp") }}" class="login-page-button ui fluid large button">
-          <span style="font-size: 18px;">{{ _("Sign up with I-Form") }}</span>
-          <img src="{{ url_for("static", filename=config.INVENIO_THEME_IFORM_ICON) }}" height="20px" />
+          <span style="font-size: 18px;">{{ _("Sign up with TUGRAZ") }}</span>
+          <img src="{{ url_for("static", filename=config.INVENIO_THEME_TUGRAZ_ICON) }}" height="20px" />
         </a>
       <div class="ui inverted horizontal divider"><span class="text-color">{{_ ("Or") }}</span></div>
       {%- endif %}

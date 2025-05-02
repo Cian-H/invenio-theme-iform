@@ -1,33 +1,33 @@
 {#
-Copyright (C) 2020-2023 Graz University of Technology.
+  Copyright (C) 2020-2023 Graz University of Technology.
 
-invenio-theme-iform is free software; you can redistribute it and/or
-modify it under the terms of the MIT License; see LICENSE file for more
-details.
+  invenio-theme-tugraz is free software; you can redistribute it and/or
+  modify it under the terms of the MIT License; see LICENSE file for more
+  details.
 #}
 
 {% set options = [
-{
-"key": "records",
-"text": _("All"),
-"value": url_for("invenio_search_ui.search"),
-"title": "repo",
-},{
-"key": "rdm",
-"text": _("Research Results"),
-"value": "/records/search",
-"title": "Research Data",
-},{
-"key": "marc21",
-"text": _("Publications"),
-"value": url_for("invenio_records_marc21.search"),
-"title": "publication",
-},{
-"key": "lom",
-"text": _("Educational Resources"),
-"value": url_for("invenio_records_lom.search"),
-"title": "oer",
-}
+  {
+    "key": "records",
+    "text": _("All"),
+    "value": url_for("invenio_search_ui.search"),
+    "title": "repo",
+  },{
+    "key": "rdm",
+    "text": _("Research Results"),
+    "value": "/records/search",
+    "title": "Research Data",
+  },{
+    "key": "marc21",
+    "text": _("Publications"),
+    "value": url_for("invenio_records_marc21.search"),
+    "title": "publication",
+  },{
+    "key": "lom",
+    "text": _("Educational Resources"),
+    "value": url_for("invenio_records_lom.search"),
+    "title": "oer",
+  }
 ]
 %}
 
@@ -44,11 +44,12 @@ details.
 
           <div class="short-menu-left-lang">
             {%- for l in current_i18n.get_locales() %}
-            {%- if current_i18n.language != l.language %}
-            <a href="{{ url_for(" invenio_i18n.set_lang", lang_code=l.language) }}" class="no-decoration">
-              {{ l.get_display_name().upper()[0:2] }}
-            </a>
-            {%- endif %}
+              {%- if current_i18n.language != l.language %}
+                <a href="{{ url_for("invenio_i18n.set_lang", lang_code=l.language) }}"
+                   class="no-decoration">
+                  {{ l.get_display_name().upper()[0:2] }}
+                </a>
+              {%- endif %}
             {%- endfor %}
           </div>
         </div>
@@ -57,7 +58,7 @@ details.
 
     <div class="short-menu-right">
       {%- block navbar_right %}
-      {%- include config.THEME_HEADER_LOGIN_TEMPLATE %}
+        {%- include config.THEME_HEADER_LOGIN_TEMPLATE %}
       {%- endblock navbar_right %}
     </div>
   </div>
@@ -70,10 +71,10 @@ details.
     <div class="left floated left aligned six wide column" id="repo-logo">
       <div class="inline-elements">
         <div class="repo-img">
-          <img height="51.862" src="{{ url_for(" static", filename="images/library_logo.png" )}}">
+          <img height="51.862" src="{{ url_for("static", filename="images/library_logo.png")}}">
         </div>
         <div class="affiliation-text">
-          <a title="Home" href="{{url_for(" invenio_theme_iform.index")}}" class="no-decoration">
+          <a title="Home" href="{{url_for("invenio_theme_tugraz.index")}}" class="no-decoration">
             {{ _("TU GRAZ") }}
             <br>
             {{ _("REPOSITORY") }}
@@ -92,7 +93,7 @@ details.
             <div class="affiliation-logo-claim-single">{{ _("PASSION") }}</div>
             <div class="affiliation-logo-claim-single">{{ _("TECHNOLOGY") }}</div>
           </div>
-          {%- include "invenio_theme_iform/iform_logo.svg" %}
+          {%- include "invenio_theme_tugraz/tu_graz_logo.svg" %}
         </a>
       </div>
     </div>

@@ -1,7 +1,7 @@
 {#
   Copyright (C) 2020-2021 Graz University of Technology.
 
-  invenio-theme-iform is free software; you can redistribute it and/or
+  invenio-theme-tugraz is free software; you can redistribute it and/or
   modify it under the terms of the MIT License; see LICENSE file for more
   details.
 #}
@@ -46,7 +46,7 @@
     {%- block header %}{% endblock header %}
     {%- block css %}
     {{ webpack['theme.css'] }}
-    {{ webpack['invenio-theme-iform-theme.css'] }}
+    {{ webpack['invenio-theme-tugraz-theme.css'] }}
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -56,10 +56,10 @@
     {%- endblock head %}
   </head>
   <body ng-csp {% if body_css_classes %} class="{{ body_css_classes|join(' ') }}"{% endif %}{% if g.ln %} lang="{{ g.ln.split('_', 1)[0]|safe }}"{% if rtl_direction %} {{ rtl_direction|safe }}{% endif %}{% endif %} itemscope itemtype="http://schema.org/WebPage" data-spy="scroll" data-target=".scrollspy-target">
-    {% if not config.THEME_IFORM_PRODUCTION %}
+    {% if not config.THEME_TUGRAZ_PRODUCTION %}
     <div class="ui sticky test-instance">
       <h4>{{_ ("Test Instance") }}</h4>
-      <p>{{_ ("This is the test instance of the I-Form Repository.") }}</p>
+      <p>{{_ ("This is the test instance of the TU Graz Repository.") }}</p>
     </div>
     {% endif %}
     {%- block body %}
@@ -71,7 +71,7 @@
     {%- block body_inner %}
 
     {%- block navbar_header %}
-    {%- include "invenio_theme_IFORM/navbar.html" %}
+    {%- include "invenio_theme_tugraz/navbar.html" %}
     <!--Flask messages for accounts-->
     {%- block flashmessages %}
     {%- from "invenio_theme/macros/messages.html" import flashed_messages with context -%}
@@ -79,7 +79,7 @@
 
     {%- endblock %}
     {%- endblock navbar_header %}
-
+    
     {#
       {%- block page_header %}
       {% include config.THEME_HEADER_TEMPLATE %}
