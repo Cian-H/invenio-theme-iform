@@ -108,7 +108,7 @@ DEPOSITS_HEADER_TEMPLATE = "invenio_theme_iform/header.html"
 # SEARCH_UI_SEARCH_TEMPLATE = "invenio_theme_iform/search.html"
 # """override the default search page"""
 
-TUG_ROUTES = {
+IFORM_ROUTES = {
     "index": "/",
     "comingsoon": "/comingsoon",
 }

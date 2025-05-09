@@ -114,7 +114,7 @@ def default_error_handler(e: Exception):
 
 def ui_blueprint(app):
     """Blueprint for the routes and resources provided by invenio-theme-iform."""
-    routes = app.config.get("TUG_ROUTES")
+    routes = app.config.get("IFORM_ROUTES")
 
     blueprint.add_url_rule(routes["index"], view_func=index)
 
