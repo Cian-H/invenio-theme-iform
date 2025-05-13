@@ -6,8 +6,9 @@ import ReactDOM from "react-dom";
 import React from "react";
 
 // called on document ready
-$(function() {
+$(function () {
   importZammadScript();
+  syncLogoHover();
 });
 
 function importZammadScript() {
@@ -45,10 +46,41 @@ window.toggleVisibility = toggleVisibility;
 const headerSearchbar = document.getElementById("header-search-bar");
 const searchBarOptions = JSON.parse(headerSearchbar.dataset.options);
 
+// Synchronises the hover states of the subcomponents of the logo
+export function syncLogoHover() {
+  const logoGrad = document.getElementById("int-header-logo-grad");
+  const logoText = document.getElementById("int-header-logo-text");
+
+  const originalFillGrad = logoGrad.getAttribute("fill");
+  const originalColorGrad = logoGrad.getAttribute("color");
+  const originalFillText = logoText.getAttribute("fill");
+  const originalColorText = logoText.getAttribute("color");
+
+  logoGrad.addEventListener("mouseover", () => {
+    logoText.setAttribute("fill", "@primaryLinkHoverBackground");
+    logoText.setAttribute("color", "@primaryLinkHoverBackground");
+  });
+  logoGrad.addEventListener("mouseout", () => {
+    logoText.setAttribute("fill", originalFillText);
+    logoText.setAttribute("color", originalColorText);
+  });
+
+  logoText.addEventListener("mouseover", () => {
+    logoGrad.setAttribute("fill", "@primaryLinkHoverBackground");
+    logoGrad.setAttribute("color", "@primaryLinkHoverBackground");
+  });
+  logoText.addEventListener("mouseout", () => {
+    logoGrad.setAttribute("fill", originalFillGrad);
+    logoGrad.setAttribute("color", originalColorGrad);
+  });
+}
+
+window.syncLogoHover = syncLogoHover;
+
 ReactDOM.render(
   <MultipleOptionsSearchBar
     options={searchBarOptions}
     placeholder={i18next.t("Search records...")}
   />,
-  headerSearchbar
+  headerSearchbar,
 );
