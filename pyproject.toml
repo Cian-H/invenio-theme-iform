@@ -107,23 +107,3 @@ line-ending = "auto"
 
 [tool.pydocstyle]
 add_ignore = ["D401"]
-
-# Babel configuration
-[tool.babel.compile_catalog]
-directory = "invenio_theme_iform/translations/"
-use-fuzzy = true
-
-[tool.babel.extract_messages]
-copyright_holder = "I-Form Advanced Research Manufacturing Research Centre"
-msgid_bugs_address = "cian.hughes@dcu.ie"
-mapping-file = "babel.ini"
-output-file = "invenio_theme_iform/translations/messages.pot"
-add-comments = "NOTE"
-
-[tool.babel.init_catalog]
-input-file = "invenio_theme_iform/translations/messages.pot"
-output-dir = "invenio_theme_iform/translations/"
-
-[tool.babel.update_catalog]
-input-file = "invenio_theme_iform/translations/messages.pot"
-output-dir = "invenio_theme_iform/translations/"

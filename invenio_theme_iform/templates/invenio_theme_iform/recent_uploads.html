@@ -8,13 +8,11 @@
 
 <!---Recent uploads-->
 <div class="ten wide column random-records-frontpage">
-  <h2>{{ _("Recent uploads") }}</h2>
+  <h2>Recent uploads</h2>
 
   {% if not records %}
     <div class="ui centered grid">
-      <p style="font-size: medium;">
-        {{ _("There are no public records to show.") }}
-      </p>
+      <p style="font-size: medium;">There are no public records to show.</p>
     </div>
   {% endif %}
 
@@ -25,13 +23,13 @@
     <article>
       <div class="badges">
         {# Publication date/Version badge #}
-        <span class="ui label blue" data-tooltip="{{ _("Publication date") }}" data-inverted="">
+        <span class="ui label blue" data-tooltip="Publication date" data-inverted="">
           {{ r.created_date_l10n_long }}
         </span>
 
         {# Resource type badge #}
         {% if r.metadata.types | length > 0%}
-          <span class="ui label grey" data-tooltip="{{ _("Resource type") }}" data-inverted="">
+          <span class="ui label grey" data-tooltip="Resource type" data-inverted="">
             {{ r.metadata.types[0] }}
           </span>
         {% endif %}
@@ -85,7 +83,7 @@
 
   {% if records %}
     <div class="ui centered grid">
-      <a class="ui button more" href="{{ url_for("invenio_search_ui.search") }}">{{ _("More") }}</a>
+      <a class="ui button more" href="{{ url_for("invenio_search_ui.search") }}">More</a>
     </div>
   {%- endif %}
 </div>

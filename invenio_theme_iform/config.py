@@ -10,7 +10,7 @@
 
 from invenio_i18n import gettext as _
 
-INVENIO_THEME_IFORM_DEFAULT_VALUE = _("I-Form Repository")
+INVENIO_THEME_IFORM_DEFAULT_VALUE = "I-Form Repository"
 """Default value for the application."""
 
 INVENIO_THEME_IFORM_BASE_TEMPLATE = "invenio_theme_iform/base.html"
@@ -63,10 +63,10 @@ THEME_HEADER_LOGIN_TEMPLATE = "invenio_theme_iform/accounts/header_login.html"
 THEME_FOOTER_TEMPLATE = "invenio_theme_iform/footer.html"
 """footer template"""
 
-THEME_FRONTPAGE_TITLE = _("I-Form Repository")
+THEME_FRONTPAGE_TITLE = "I-Form Repository"
 """Frontpage title."""
 
-THEME_SITENAME = _("Repository")
+THEME_SITENAME = "Repository"
 """Site name."""
 
 # Invenio-accounts

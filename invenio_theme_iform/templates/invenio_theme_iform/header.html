@@ -8,8 +8,8 @@
 
 {% if not config.THEME_IFORM_PRODUCTION %}
   <div class="ui sticky test-instance">
-    <h4>{{ _("Test Instance") }}</h4>
-    <p>{{ _("This is the test instance of the I-Form Repository.") }}</p>
+    <h4>Test Instance</h4>
+    <p>This is the test instance of the I-Form Repository.</p>
   </div>
 {% endif %}
 
@@ -32,17 +32,16 @@
               <div class="two wide column main-menu-entry">
                 <a href="{{url_for('invenio_theme_iform.index')}}" title="Home" class="no-decoration">
                   <span class="home-inline">
-                    {%- include "invenio_theme_iform/home_icon.svg" %}
-                    {{ _("Home") }}
+                    {%- include "invenio_theme_iform/home_icon.svg" %} Home
                   </span>
                 </a>
               </div>
 
               <div class="two wide column main-menu-entry">
-                <a role="menuitem" href="/communities" class="no-decoration">{{ _("Communities") }}</a>
+                <a role="menuitem" href="/communities" class="no-decoration">Communities</a>
               </div>
               <div class="two wide column main-menu-entry">
-                <a role="menuitem" href="/me/overview" class="no-decoration">{{ _("Dashboard") }}</a>
+                <a role="menuitem" href="/me/overview" class="no-decoration">Dashboard</a>
               </div>
             </div>
 

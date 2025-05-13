@@ -59,13 +59,13 @@ def modify_user_dashboard(app):
     user_dashboard_menu = root_menu.submenu("dashboard")
     user_dashboard_menu.submenu("overview").register(
         "invenio_theme_iform.overview",
-        text=_("Overview"),
+        text="Overview",
         order=0,
     )
 
     root_menu.submenu("actions.deposit").register(
         "invenio_theme_iform.overview",
-        _("My dashboard"),
+        "My dashboard",
         order=1,
     )
 

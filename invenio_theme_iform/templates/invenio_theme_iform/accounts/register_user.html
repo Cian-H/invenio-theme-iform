@@ -17,21 +17,21 @@
 
   <div class="ui stackable two column grid">
     <div class="centered row">
-      <h1 class="ui header">{{ _("Create an Account") }}</h1>
+      <h1 class="ui header">Create an Account</h1>
     </div>
 
     <div class="column" id="switch_left">
       <div class="ui basic segment">
-        <h4 class="ui header">{{ _("Citeable. Discoverable.") }}</h4>
+        <h4 class="ui header">Citeable. Discoverable.</h4>
         <p class="bodytext">
-          {{ _("Uploads get a Digital Object Identifier (DOI) to make them easily and uniquely citeable.")}}</h5>
-        <h4 class="ui header">{{ _("Communities.") }}</h4>
+          Uploads get a Digital Object Identifier (DOI) to make them easily and uniquely citeable.
+        <h4 class="ui header">Communities.</h4>
         <p class="bodytext">
-          {{ _("Accept or reject uploads to your own community (e.g workshops, EU projects, institutions or entire disciplines).") }}
+          Accept or reject uploads to your own community (e.g workshops, EU projects, institutions or entire disciplines).
           </h5>
-        <h4 class="ui header">{{ _("Trusted Research Data Management") }}</h4>
+        <h4 class="ui header">Trusted Research Data Management</h4>
         <p class="bodytext">
-          {{ _("Built on top of I-Form expertise in them managing of research data.") }}
+          Built on top of I-Form expertise in the managing of research data.
           </h5>
       </div>
     </div>
@@ -41,7 +41,7 @@
       {%- if config.INVENIO_CONFIG_IFORM_SHIBBOLETH %}
       <div class="ui divider"></div>
         <a href="{{ url_for("sso_saml.sso", idp="idp") }}" class="login-page-button ui fluid large button">
-          <span style="font-size: 18px;">{{ _("Sign up with I-Form") }}</span>
+          <span style="font-size: 18px;">Sign up with I-Form</span>
           <img src="{{ url_for("static", filename=config.INVENIO_THEME_IFORM_ICON) }}" height="20px" />
         </a>
       <div class="ui inverted horizontal divider"><span class="text-color">{{_ ("Or") }}</span></div>
@@ -58,7 +58,7 @@
         <div class="ui padded centered large form">
           <div class="ui styled accordion">
             <div class="title trigger {{ accordion_active }}">
-              {{ _("Sign up with repository credentials") }}
+              Sign up with repository credentials
               <i class="user icon button"></i>
             </div>
             <div class="content {{ accordion_active }}">
@@ -79,7 +79,7 @@
 
                 <div class="centered row">
                   <button type="submit" class="ui fluid large submit button">
-                    <i class="ui edit outline icon"></i>{{ _("Sign up") }}
+                    <i class="ui edit outline icon"></i>Sign up
                   </button>
                 </div>
               </form>

@@ -9,22 +9,22 @@
 {% set options = [
   {
     "key": "records",
-    "text": _("All"),
+    "text": "All",
     "value": url_for("invenio_search_ui.search"),
     "title": "repo",
   },{
     "key": "rdm",
-    "text": _("Research Results"),
+    "text": "Research Results",
     "value": "/records/search",
     "title": "Research Data",
   },{
     "key": "marc21",
-    "text": _("Publications"),
+    "text": "Publications",
     "value": url_for("invenio_records_marc21.search"),
     "title": "publication",
   },{
     "key": "lom",
-    "text": _("Educational Resources"),
+    "text": "Educational Resources",
     "value": url_for("invenio_records_lom.search"),
     "title": "oer",
   }
@@ -40,17 +40,6 @@
             <div class="item p-0 search-bar rel-mr-1">
               <div id="header-search-bar" data-options='{{ options | tojson }}'></div>
             </div>
-          </div>
-
-          <div class="short-menu-left-lang">
-            {%- for l in current_i18n.get_locales() %}
-              {%- if current_i18n.language != l.language %}
-                <a href="{{ url_for("invenio_i18n.set_lang", lang_code=l.language) }}"
-                   class="no-decoration">
-                  {{ l.get_display_name().upper()[0:2] }}
-                </a>
-              {%- endif %}
-            {%- endfor %}
           </div>
         </div>
       </div>
@@ -75,11 +64,11 @@
         </div>
         <div class="affiliation-text">
           <a title="Home" href="{{url_for("invenio_theme_iform.index")}}" class="no-decoration">
-            {{ _("I-FORM") }}
+            I-FORM
             <br>
-            {{ _("RESEARCH DATA") }}
+            RESEARCH DATA
             <br>
-            {{ _("REPOSITORY") }}
+            REPOSITORY
           </a>
         </div>
       </div>

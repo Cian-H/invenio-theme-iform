@@ -31,7 +31,7 @@
       {%- endblock head_meta %}
 
       {%- block head_title %}
-        {%- set title = title or _(config.THEME_SITENAME) or _("Invenio") %}
+        {%- set title = title or config.THEME_SITENAME %}
         <title>{{title}}</title>
       {%- endblock head_title %}
 

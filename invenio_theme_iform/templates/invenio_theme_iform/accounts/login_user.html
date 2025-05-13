@@ -21,7 +21,7 @@
       <div class="ui login segment padded">
         <div class="divider hidden"></div>
         {%- block form_header %}
-        <h3 class="ui login header">{{ _('Log in to Repository') }}</h3>
+        <h3 class="ui login header">Log in to Repository</h3>
         {%- endblock form_header %}
         <div class="ui divider"></div>
         <!--Log in with SSO-->
@@ -34,17 +34,13 @@
         {% for name in config.SSO_SAML_IDPS.keys() %}
         <div class="field">
           <a class="login-page-button ui fluid large button" href="{{ url_for('sso_saml.sso', idp=name) }}">
-            {{
-            _('Log in with %(title)s', title=config.SSO_SAML_IDPS[name]['title']|default("SAML", true))
-            }}
+            Log in with {{ config.SSO_SAML_IDPS[name]['title']|default("SAML", true) }}
             <img src="{{ url_for('static', filename=config.INVENIO_THEME_IFORM_ICON)}}" height="20px" />
           </a>
         </div>
         {% endfor %}
         {%- if config.ACCOUNTS_LOCAL_LOGIN_ENABLED %}
-        <div class="ui horizontal divider">
-          {{ _("Or") }}
-        </div>
+        <div class="ui horizontal divider">Or</div>
         {%- endif %}
         {% endif %}
 
@@ -54,7 +50,7 @@
         {%- set accordion_active = "active" if form.errors else "" %}
         <div class="ui styled accordion">
           <div class="title trigger {{ accordion_active }}">
-            {{ _('Log in with repository credentials') }}
+            Log in with repository credentials
             <i class="user icon button"></i>
           </div>
           <div class="content {{ accordion_active }}">
@@ -64,7 +60,7 @@
               {{ render_field(form.email, icon="user icon", autofocus=True, errormsg=False) }}
               {{ render_field(form.password, icon="lock icon", errormsg=False) }}
               <button type="submit" class="ui fluid large submit button">
-                <i class="ui sign-in icon"></i>{{ _('Log In') }}
+                <i class="ui sign-in icon"></i>Log In
               </button>
             </form>
           </div>
@@ -79,7 +75,7 @@
       {%- if security.registerable %}
       <div class="ui primary segment padded text-muted">
         {% trans sitename=config.ACCOUNTS_SITENAME %}New to {{ sitename }}?{% endtrans %}
-        <a href="{{ url_for_security('register', next=request.args.get('next')) }}">{{ _('Sign up') }}</a>
+        <a href="{{ url_for_security('register', next=request.args.get('next')) }}">Sign up</a>
       </div>
       {%- endif %}
       {%- endblock registerable %}
@@ -88,7 +84,7 @@
       {%- if security.recoverable %}
       <div class="ui basic segment padded">
         <a class="ui inverted header tiny"
-          href="{{ url_for_security('forgot_password') }}">{{ _('Forgot password?') }}</a>
+          href="{{ url_for_security('forgot_password') }}">Forgot password?</a>
       </div>
       {%- endif %}
       {%- endblock recoverable %}
