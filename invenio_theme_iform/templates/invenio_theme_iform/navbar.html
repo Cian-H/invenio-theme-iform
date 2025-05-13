@@ -71,7 +71,7 @@
     <div class="left floated left aligned six wide column" id="repo-logo">
       <div class="inline-elements">
         <div class="repo-img">
-          <img height="51.862" src="{{ url_for("static", filename="images/library_logo.png")}}">
+          {%- include "invenio_theme_iform/repository_logo.svg" %}
         </div>
         <div class="affiliation-text">
           <a title="Home" href="{{url_for("invenio_theme_iform.index")}}" class="no-decoration">
