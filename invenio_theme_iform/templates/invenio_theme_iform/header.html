@@ -32,16 +32,7 @@
               <div class="two wide column main-menu-entry">
                 <a href="{{url_for('invenio_theme_iform.index')}}" title="Home" class="no-decoration">
                   <span class="home-inline">
-                    <svg shape-rendering="geometricPrecision" id="int-menu-q-home-icon"
-                         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg"
-                         version="1.1" xml:space="preserve" height="36.997" width="35.969"
-                         enable-background="new 0 0 595.28 841.89" y="0px" x="0px" xmlns:cc="http://creativecommons.org/ns#"
-                         xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 35.969 36.997451">
-                         <polyline style="stroke:#E4154B;stroke-linecap:square;stroke-width:4;fill:none"
-                                   points="282.72 437.28 282.72 414.77 297.71 406.69 312.69 414.77 312.69 437.28"
-                                   transform="translate(-279.72 -403.28)">
-                         </polyline>
-                    </svg>
+                    {%- include "invenio_theme_iform/home_icon.svg" %}
                     {{ _("Home") }}
                   </span>
                 </a>
