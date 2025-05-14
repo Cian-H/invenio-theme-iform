@@ -7,58 +7,63 @@
 #}
 
 {% if not config.THEME_IFORM_PRODUCTION %}
-  <div class="ui sticky test-instance">
-    <h4>Test Instance</h4>
-    <p>This is the test instance of the I-Form Repository.</p>
-  </div>
+    <div class="ui sticky test-instance">
+        <h4>Test Instance</h4>
+        <p>This is the test instance of the I-Form Repository.</p>
+    </div>
 {% endif %}
 
 <div>
-  <header>
-    {%- block site_banner %}
-      {% from 'invenio_banners/banner.html' import banner %}
-      {{ banner() }}
-    {%- endblock site_banner %}
+    <header>
+        {%- block site_banner %}
+            {% from 'invenio_banners/banner.html' import banner %}
+            {{ banner() }}
+        {%- endblock site_banner %}
 
-    {%- block navbar %}
-      <nav>
-        {%- block navbar_header %}
-          {%- include "invenio_theme_iform/navbar.html" %}
-        {%- endblock navbar_header %}
+        {%- block navbar %}
+            <nav>
+                {%- block navbar_header %}
+                    {%- include "invenio_theme_iform/navbar.html" %}
+                {%- endblock navbar_header %}
 
-        <div class="ui container">
-          <div class="ui grid stackable container">
-            <div class="three column row centered" style="padding-bottom: 0;">
-              <div class="two wide column main-menu-entry">
-                <a href="{{url_for('invenio_theme_iform.index')}}" title="Home" class="no-decoration">
-                  <span class="home-inline">
-                    {%- include "invenio_theme_iform/home_icon.svg" %} Home
-                  </span>
-                </a>
-              </div>
+                <div class="ui container">
+                    <div class="ui grid stackable container">
+                        <div class="three column row centered" style="padding-bottom: 0;">
+                            <div class="two wide column main-menu-entry">
+                                <a
+                                    href="{{ url_for('invenio_theme_iform.index') }}"
+                                    title="Home"
+                                    class="no-decoration"
+                                >
+                                    <span class="home-inline">
+                                        {%- include "invenio_theme_iform/home_icon.svg" %} Home
+                                    </span>
+                                </a>
+                            </div>
 
-              <div class="two wide column main-menu-entry">
-                <a role="menuitem" href="/communities" class="no-decoration">Communities</a>
-              </div>
-              <div class="two wide column main-menu-entry">
-                <a role="menuitem" href="/me/overview" class="no-decoration">Dashboard</a>
-              </div>
-            </div>
+                            <div class="two wide column main-menu-entry">
+                                <a role="menuitem" href="/communities" class="no-decoration"
+                                    >Communities</a
+                                >
+                            </div>
+                            <div class="two wide column main-menu-entry">
+                                <a role="menuitem" href="/me/overview" class="no-decoration"
+                                    >Dashboard</a
+                                >
+                            </div>
+                        </div>
 
-            <div id="margin-divider" class="ui divider main-menu-underline-line">
+                        <div id="margin-divider" class="ui divider main-menu-underline-line"></div>
+                    </div>
 
-            </div>
-          </div>
+                    <div class="spacer"></div>
+                </div>
+            </nav>
+        {%- endblock navbar %}
 
-          <div class="spacer"></div>
-        </div>
-
-      </nav>
-    {%- endblock navbar %}
-
-    {%- block flashmessages %}
-      {%- from "invenio_theme/macros/messages.html" import flashed_messages with context -%}
-      {{ flashed_messages() }}
-    {%- endblock %}
-  </header>
+        {%- block flashmessages %}
+            {%- from "invenio_theme/macros/messages.html" import flashed_messages with context -%}
+            {{ flashed_messages() }}
+        {%- endblock %}
+    </header>
 </div>

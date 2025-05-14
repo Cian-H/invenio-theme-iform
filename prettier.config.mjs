@@ -1,17 +1,17 @@
 const config = {
-  singleQuote: false,
-  tabWidth: 4,
-  trailingComma: "all",
-  printWidth: 100,
-  plugins: ["prettier-plugin-jinja-template"],
-  overrides: [
-    {
-      files: ["*.html"],
-      options: {
-        parser: "jinja-template"
-      }
-    }
-  ]
+    singleQuote: false,
+    tabWidth: 4,
+    trailingComma: "all",
+    printWidth: 100,
+    plugins: ["prettier-plugin-jinja-template"],
+    overrides: [
+        {
+            files: ["*.html"],
+            options: {
+                parser: "jinja-template",
+            },
+        },
+    ],
 };
 
 export default config;
