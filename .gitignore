@@ -73,3 +73,6 @@ devenv.local.nix
 
 # python version lock
 .python-version
+
+# bun modules
+node_modules
