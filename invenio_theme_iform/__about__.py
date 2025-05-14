@@ -6,6 +6,6 @@
 # modify it under the terms of the MIT License; see LICENSE file for more
 # details.
 
-"""Version data for this python module."""
+"""Metadata for this python module."""
 
-version = "4.15.9"
+__version__ = "2025.5.14"

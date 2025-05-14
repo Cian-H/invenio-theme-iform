@@ -58,6 +58,7 @@ invenio_theme_iform = "invenio_theme_iform.config"
 invenio_theme_iform = "invenio_theme_iform.ext:finalize_app"
 
 [dependency-groups]
+dev = ["hatch>=1.14.1", "pydocstyle>=6.3.0", "ruff>=0.11.7"]
 tests = [
     "invenio-app>=1.3.4",
     "invenio-previewer>=3.0.0",
@@ -69,11 +70,12 @@ tests = [
 ]
 
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-calver"]
 build-backend = "hatchling.build"
 
 [tool.hatch.version]
-path = "invenio_theme_iform/__version__.py"
+scheme = "calver"
+path = "invenio_theme_iform/__about__.py"
 
 [tool.hatch.build]
 include = ["invenio_theme_iform"]
