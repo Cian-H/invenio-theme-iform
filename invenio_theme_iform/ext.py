@@ -9,7 +9,6 @@
 """invenio module for I-Form theme."""
 
 from flask_login import login_required
-from invenio_i18n import lazy_gettext as _
 from invenio_records_marc21.ui.theme import current_identity_can_view
 
 from . import config

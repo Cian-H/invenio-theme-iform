@@ -9,79 +9,79 @@
 name: CI
 
 on:
-  push:
-    branches: master
-  pull_request:
-    branches: master
-  schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron: "0 3 * * 6"
-  workflow_dispatch:
-    inputs:
-      reason:
-        description: "Reason"
-        required: false
-        default: "Manual trigger"
+    push:
+        branches: master
+    pull_request:
+        branches: master
+    schedule:
+        # * is a special character in YAML so you have to quote this string
+        - cron: "0 3 * * 6"
+    workflow_dispatch:
+        inputs:
+            reason:
+                description: "Reason"
+                required: false
+                default: "Manual trigger"
 
 jobs:
-  create-strategy:
-    runs-on: ubuntu-latest
+    create-strategy:
+        runs-on: ubuntu-latest
 
-    outputs:
-      matrix: ${{ steps.requirements.outputs.matrix }}
+        outputs:
+            matrix: ${{ steps.requirements.outputs.matrix }}
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
 
-      - name: requirements
-        id: requirements
-        run: |
-          # Define a simple matrix with your Python version
-          # Since we're using pyproject.toml with Python 3.12 requirement
-          echo "matrix={\"include\": [{\"python-version\": \"3.12\"}]}" >> $GITHUB_OUTPUT
+            - name: requirements
+              id: requirements
+              run: |
+                  # Define a simple matrix with your Python version
+                  # Since we're using pyproject.toml with Python 3.12 requirement
+                  echo "matrix={\"include\": [{\"python-version\": \"3.12\"}]}" >> $GITHUB_OUTPUT
 
-          # Print the matrix for debugging
-          echo "-------------------"
-          echo "Matrix: {\"include\": [{\"python-version\": \"3.12\"}]}"
-          echo "-------------------"
+                  # Print the matrix for debugging
+                  echo "-------------------"
+                  echo "Matrix: {\"include\": [{\"python-version\": \"3.12\"}]}"
+                  echo "-------------------"
 
-  tests:
-    needs: create-strategy
-    runs-on: ubuntu-latest
-    name: Test (Python ${{matrix.python-version}})
-    strategy:
-      fail-fast: false
-      matrix: ${{ fromJson(needs.create-strategy.outputs.matrix) }}
+    tests:
+        needs: create-strategy
+        runs-on: ubuntu-latest
+        name: Test (Python ${{matrix.python-version}})
+        strategy:
+            fail-fast: false
+            matrix: ${{ fromJson(needs.create-strategy.outputs.matrix) }}
 
-    # Simplified environment without service variables
-    env:
-      PYTHON_VERSION: ${{ matrix.python-version }}
+        # Simplified environment without service variables
+        env:
+            PYTHON_VERSION: ${{ matrix.python-version }}
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
 
-      - name: Set up uv
-        uses: astral-sh/setup-uv@v6
-        with:
-          python-version: "${{ matrix.python-version }}"
-          enable-cache: true
-          cache-dependency-glob: |
-            pyproject.toml
-          cache-suffix: ${{ matrix.python-version }}
+            - name: Set up uv
+              uses: astral-sh/setup-uv@v6
+              with:
+                  python-version: "${{ matrix.python-version }}"
+                  enable-cache: true
+                  cache-dependency-glob: |
+                      pyproject.toml
+                  cache-suffix: ${{ matrix.python-version }}
 
-      - name: Show configuration
-        run: |
-          uv --version
-          uv run python --version
-          docker --version
-          docker ps
+            - name: Show configuration
+              run: |
+                  uv --version
+                  uv run python --version
+                  docker --version
+                  docker ps
 
-      - name: Install dependencies
-        run: |
-          uv sync --group tests
+            - name: Install dependencies
+              run: |
+                  uv sync --group tests
 
-      - name: Run tests
-        run: |
-          uv run test
+            - name: Run tests
+              run: |
+                  uv run test

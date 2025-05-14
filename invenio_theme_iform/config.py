@@ -8,8 +8,6 @@
 
 """invenio module for I-Form theme."""
 
-from invenio_i18n import gettext as _
-
 INVENIO_THEME_IFORM_DEFAULT_VALUE = "I-Form Repository"
 """Default value for the application."""
 
