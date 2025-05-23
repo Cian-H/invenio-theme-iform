@@ -2367,6 +2367,13 @@ dev = [
     { name = "pydocstyle" },
     { name = "ruff" },
 ]
+docs = [
+    { name = "invenio-app" },
+    { name = "invenio-previewer" },
+    { name = "invenio-rdm-records" },
+    { name = "invenio-search", extra = ["opensearch2"] },
+    { name = "sphinx" },
+]
 tests = [
     { name = "invenio-app" },
     { name = "invenio-previewer" },
@@ -2392,6 +2399,13 @@ dev = [
     { name = "pre-commit", specifier = ">=4.2.0" },
     { name = "pydocstyle", specifier = ">=6.3.0" },
     { name = "ruff", specifier = ">=0.11.7" },
+]
+docs = [
+    { name = "invenio-app", specifier = ">=1.3.4" },
+    { name = "invenio-previewer", specifier = ">=3.0.0" },
+    { name = "invenio-rdm-records", specifier = ">=18.0.0" },
+    { name = "invenio-search", extras = ["opensearch2"], specifier = ">=2.1.0" },
+    { name = "sphinx", specifier = ">=4.5.0" },
 ]
 tests = [
     { name = "invenio-app", specifier = ">=1.3.4" },
