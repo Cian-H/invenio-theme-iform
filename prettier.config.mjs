@@ -11,6 +11,18 @@ const config = {
                 parser: "jinja-template",
             },
         },
+        {
+            files: "*.yaml",
+            options: {
+                tabWidth: 2,
+            },
+        },
+        {
+            files: "*.yml",
+            options: {
+                tabWidth: 2,
+            },
+        },
     ],
 };
 

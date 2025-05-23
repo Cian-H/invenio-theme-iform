@@ -1,45 +1,45 @@
 repos:
-    - repo: local
-      hooks:
-          - id: check-version-increment
-            name: Check Version Increment
-            entry: python scripts/hooks/pre-push/check_version_increment.py
-            language: system
-            pass_filenames: false
-            stages: [pre-push]
+  - repo: local
+    hooks:
+      - id: check-version-increment
+        name: Check Version Increment
+        entry: python scripts/hooks/pre-push/check_version_increment.py
+        language: system
+        pass_filenames: false
+        stages: [pre-push]
 
-          - id: tests
-            name: Run Python Tests
-            entry: uv run test
-            language: system
-            pass_filenames: false
-            stages: [pre-push]
+      - id: tests
+        name: Run Python Tests
+        entry: uv run test
+        language: system
+        pass_filenames: false
+        stages: [pre-push]
 
-          - id: prettier-with-jinja
-            name: Prettier (with Jinja support)
-            entry: bun run prettier -c
-            language: system
-            types_or:
-                [javascript, jsx, ts, tsx, css, scss, sass, less, yaml, json, markdown, html, jinja]
-            stages: [pre-push]
+      - id: prettier-with-jinja
+        name: Prettier (with Jinja support)
+        entry: bun run prettier -c
+        language: system
+        types_or:
+          [javascript, jsx, ts, tsx, css, scss, sass, less, yaml, json, markdown, html, jinja]
+        stages: [pre-push]
 
-    - repo: https://github.com/astral-sh/ruff-pre-commit
-      rev: v0.11.9
-      hooks:
-          - id: ruff
-            stages: [pre-push]
-          - id: ruff-format
-            stages: [pre-push]
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.11.9
+    hooks:
+      - id: ruff
+        stages: [pre-push]
+      - id: ruff-format
+        stages: [pre-push]
 
-    - repo: https://github.com/pre-commit/mirrors-eslint
-      rev: v9.26.0
-      hooks:
-          - id: eslint
-            additional_dependencies:
-                - eslint@latest
-                - eslint/js
-                - eslint/json
-                - eslint-plugin-react
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v9.26.0
+    hooks:
+      - id: eslint
+        additional_dependencies:
+          - eslint@latest
+          - eslint/js
+          - eslint/json
+          - eslint-plugin-react
 
-            files: \.(js|ts|jsx|tsx)$
-            stages: [pre-push]
+        files: \.(js|ts|jsx|tsx)$
+        stages: [pre-push]
