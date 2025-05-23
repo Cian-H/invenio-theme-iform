@@ -28,7 +28,7 @@
         :target: https://coveralls.io/github/Cian-H/invenio-theme-iform?branch=master
 
 .. image:: https://img.shields.io/badge/code%20style-Ruff-D7FF64.svg
-    :target: https://github.com/astral-sh/ruff
+        :target: https://github.com/astral-sh/ruff
 
 I-Form standard theme.
 
