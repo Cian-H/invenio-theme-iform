@@ -74,8 +74,6 @@ jobs:
         run: |
           uv --version
           uv run python --version
-          docker --version
-          docker ps
 
       - name: Install dependencies
         run: |
