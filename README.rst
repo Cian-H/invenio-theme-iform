@@ -24,8 +24,8 @@
 .. image:: https://readthedocs.org/projects/invenio-theme-iform/badge/?version=latest
         :target: https://invenio-theme-iform.readthedocs.io/en/latest/?badge=latest
 
-.. image:: https://img.shields.io/coveralls/Cian-H/invenio-theme-iform.svg
-        :target: https://coveralls.io/r/Cian-H/invenio-theme-iform
+.. image:: https://coveralls.io/repos/github/Cian-H/invenio-theme-iform/badge.svg?branch=master
+        :target: https://coveralls.io/github/Cian-H/invenio-theme-iform?branch=master
 
 .. image:: https://img.shields.io/badge/code%20style-Ruff-D7FF64.svg
     :target: https://github.com/astral-sh/ruff
