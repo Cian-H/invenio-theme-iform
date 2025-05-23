@@ -8,4 +8,4 @@
 
 """Metadata for this python module."""
 
-__version__ = "2025.5.20.5"
+__version__ = "2025.5.20.6"

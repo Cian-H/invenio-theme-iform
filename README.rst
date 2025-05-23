@@ -24,7 +24,7 @@
 .. image:: https://readthedocs.org/projects/invenio-theme-iform/badge/?version=latest
         :target: https://invenio-theme-iform.readthedocs.io/en/latest/?badge=latest
 
-.. image:: https://img.shields.io/coveralls/mb-wali/invenio-theme-iform.svg
+.. image:: https://img.shields.io/coveralls/Cian-H/invenio-theme-iform.svg
         :target: https://coveralls.io/r/Cian-H/invenio-theme-iform
 
 .. image:: https://img.shields.io/badge/code%20style-Ruff-D7FF64.svg
