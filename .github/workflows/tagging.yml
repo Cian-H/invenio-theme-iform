@@ -1,0 +1,20 @@
+name: Auto Version Tag
+
+on:
+  workflow_run:
+    workflows:
+      - Tests
+    types:
+      - completed
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Version tag
+        uses: Jorricks/action-python-autotagging@1.0.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: invenio_theme_iform/__about__.py
+          variable: __version__
