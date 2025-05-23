@@ -15,17 +15,17 @@
 .. image:: https://img.shields.io/pypi/dm/invenio-theme-iform.svg
         :target: https://pypi.python.org/pypi/invenio-theme-iform
 
-.. image:: https://img.shields.io/github/tag/tu-graz-library/invenio-theme-iform.svg
+.. image:: https://img.shields.io/github/tag/Cian-H/invenio-theme-iform.svg
         :target: https://github.com/Cian-H/invenio-theme-iform/releases
 
-.. image:: https://img.shields.io/github/license/tu-graz-library/invenio-theme-iform.svg
+.. image:: https://img.shields.io/github/license/Cian-H/invenio-theme-iform.svg
         :target: https://github.com/Cian-H/invenio-theme-iform/blob/master/LICENSE
 
 .. image:: https://readthedocs.org/projects/invenio-theme-iform/badge/?version=latest
         :target: https://invenio-theme-iform.readthedocs.io/en/latest/?badge=latest
 
 .. image:: https://img.shields.io/coveralls/mb-wali/invenio-theme-iform.svg
-        :target: https://coveralls.io/r/mb-wali/invenio-theme-iform
+        :target: https://coveralls.io/r/Cian-H/invenio-theme-iform
 
 .. image:: https://img.shields.io/badge/code%20style-Ruff-D7FF64.svg
     :target: https://github.com/astral-sh/ruff
