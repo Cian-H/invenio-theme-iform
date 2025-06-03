@@ -8,6 +8,7 @@
 
 """invenio module for I-Form theme."""
 
+from flask import g, has_request_context
 from flask_login import login_required
 from invenio_records_marc21.ui.theme import current_identity_can_view
 
@@ -34,7 +35,16 @@ class InvenioThemeIform(object):
 
         @app.context_processor
         def inject_visibility():
-            return {"can_view_marc21": current_identity_can_view()}
+            def can_view_marc21():
+                try:
+                    # Only check if we're in a request context and identity exists
+                    if has_request_context() and hasattr(g, "identity") and g.identity:
+                        return current_identity_can_view()
+                    return False
+                except (AttributeError, RuntimeError):
+                    return False
+
+            return {"can_view_marc21": can_view_marc21()}
 
         app.extensions["invenio-theme-iform"] = self
 
