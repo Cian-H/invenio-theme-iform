@@ -27,6 +27,7 @@ dependencies = [
     "invenio-config-iform>=2025.5.20.1",
     "invenio_records_global_search>=0.0.1",
     "invenio_records_marc21>=0.21.0",
+    "invenio-records-lom>=0.16.0",
 ]
 
 [project.urls]
