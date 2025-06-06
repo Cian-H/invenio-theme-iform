@@ -46,9 +46,6 @@ invenio_theme_iform = "invenio_theme_iform:InvenioThemeIform"
 [project.entry-points."invenio_base.blueprints"]
 invenio_theme_iform = "invenio_theme_iform.views:create_blueprint"
 
-[project.entry-points."invenio_i18n.translations"]
-messages = "invenio_theme_iform"
-
 [project.entry-points."invenio_assets.webpack"]
 invenio_theme_iform_theme = "invenio_theme_iform.webpack:theme"
 
