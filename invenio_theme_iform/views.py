@@ -8,6 +8,7 @@
 
 """invenio module for I-Form theme."""
 
+import traceback
 from functools import wraps
 from typing import Dict
 
@@ -121,6 +122,10 @@ def default_error_handler(e: Exception):
     #   - `e`, the passed-in exception
     # to get proxied-to objects: `flask.request._get_current_object()`
 
+    msg = f"default_error_handler of invenio-theme-iform captured following error type: {
+        type(e)
+    } with message {e} and stack trace {traceback.format_exc()}"
+    current_app.logger.error(msg)
     return render_template(current_app.config["THEME_500_TEMPLATE"]), 500
 
 
